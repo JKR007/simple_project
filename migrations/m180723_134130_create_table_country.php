@@ -13,12 +13,12 @@ class m180723_134130_create_table_country extends Migration
   public function safeUp()
   {
     $this->createTable('country', [
-      'id' => $this->primaryKey()->unsigned(),
-      'code' => $this->string(2)->unique()->notNull(),
-      'name' => $this->string(80)->notNull(),
+      'id'        => $this->primaryKey()->unsigned(),
+      'code'      => $this->string(2)->unique()->notNull(),
+      'name'      => $this->string(80)->notNull(),
       'phonecode' => $this->integer(5)->notNull(),
-      'lat' => $this->string(45)->notNull(),
-      'lng' => $this->string(45)->notNull()
+      'lat'       => $this->string(45)->notNull(),
+      'lng'       => $this->string(45)->notNull()
     ]);
 
     //ADDING DATA TO TABLE
