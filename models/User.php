@@ -36,6 +36,14 @@ class User extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public static function findIdentity($id)
+    {
+        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [
